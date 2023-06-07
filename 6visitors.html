@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ujinnoo.com ｜ 방명록</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "굴림";
+        }
+
+        body {
+            height: 830px;
+            background-image: url(./img/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        header h1 {
+            width: fit-content;
+            margin-top: 10px;
+            margin-left: 7%;
+            display: inline-block;
+            color: white;
+            -webkit-text-stroke: 1px #000000;
+            font-family: 'PyeongChangPeace-Bold';
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header h1:hover {
+            color: #FFD3FE;
+        }
+
+        header ul#main {
+            margin-right: 10%;
+        }
+
+        header ul#main li {
+            font-size: 10pt;
+            list-style-type: none;
+        }
+
+        header ul#main a {
+            color: black;
+        }
+
+
+        .menu1 {
+            position: relative;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 90px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu1:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu2 {
+            position: relative;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu2:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu3 {
+            position: relative;
+            background: #E3E1FF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu3:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu4 {
+            position: relative;
+            background: #FFFFD5;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu4:hover {
+            transform: translateY(-10px);
+        }
+
+        .sub1 {
+            position: absolute;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 60px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub1:hover {
+            transform: translateX(-10%);
+        }
+
+        .sub2 {
+            position: absolute;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 155px 3%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        aside {
+            position: relative;
+            margin-top: -75px;
+            margin-right: 10px;
+            height: 650px;
+            border: solid 1px #000000;
+            background-color: white;
+            border-radius: 10px;
+            z-index: auto;
+        }
+
+        section {
+            position: relative;
+            margin-top: -75px;
+            height: 650px;
+            background: url(img/fish.gif);
+            background-repeat: no-repeat;
+            background-position-y: 80%;
+            border: solid 1px #000000;
+            background-color: white;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .text {
+            margin: 42px auto;
+            height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .text2 {
+            margin: 42px auto;
+            height: 550px;
+            /* overflow-y: hidden; */
+            overflow-x: hidden;
+        }
+
+        .memo1 {
+            margin: 20px auto;
+            padding: 30px;
+            text-align: left;
+            width: 85%;
+            border: dashed 1px black;
+        }
+
+        .memo {
+            margin: 20px auto;
+            padding: 30px;
+            text-align: left;
+            width: 85%;
+            border: solid 1px black;
+        }
+
+        .emoji {
+            text-align: center;
+            width: 30px;
+            height: 30px;
+        }
+
+        .write {
+            padding-left: 10px;
+            display: flex;
+            margin-top: -10px;
+            width: 80%;
+            height: 30px;
+        }
+
+        .write2 {
+            padding-left: 10px;
+            display: inline-block;
+            margin-top: 10px;
+            width: 100%;
+            height: 50px;
+        }
+
+        .send {
+            margin-top: 10px;
+            height: 30px;
+            width: 100%;
+        }
+
+        .small {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            text-align: right;
+            color: #919191;
+        }
+
+        .text2 ul, li{
+            font-size: 1.2rem;
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        .text2 a {
+            color: black;
+            text-decoration: none;
+        }
+        .text2 a:hover {
+            color: #FFD3FE;
+        }
+
+        footer {
+            text-align: right;
+            margin: 50px 7% 0 auto;
+            font-size: 12px;
+            text-align: 1;
+        }
+
+        footer img {
+            width: 2%;
+            margin-bottom: 5px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .c1 {width: 8.33%; float: right; padding: 10px;}
+        .c2 {width: 16.66%; float: right; padding: 15px;}
+        .c3 {width: 25%; float: right; padding: 15px;}
+        .c4 {width: 33.33%; float: right; padding: 15px;}
+        .c5 {width: 41.66%; float: right; padding: 15px;}
+        .c6 {width: 50%; float: right; padding: 15px;}
+        .c7 {width: 58.33%; float: right; padding: 15px;}
+        .c8 {width: 66.66%; float: right; padding: 15px;}
+        .c9 {width: 75%; float: right; padding: 15px;}
+        .c10 {width: 83.33%; float: right; padding: 15px;}
+        .c11 {width: 91.66%; float: right; padding: 15px;}
+        .c12 {width: 100%; float: right; padding: 15px;}
+
+        .a5 {width: 41.66%; display: inline-block; padding: 15px;}
+
+        @media only screen and (max-width: 768px) {
+            [class*="c"] {
+                width: 100%;
+            }
+            [class*="a"] {
+                width: 80%;
+            }
+
+            [class*="menu"] {
+                width: 54px;
+                margin: 5px;
+                font-size: 8pt;
+            }
+
+            aside h1 {
+                text-align: center;
+            }
+
+            section h1 {
+                text-align: center;
+            }
+
+            header ul {
+                margin-right: 30px;
+            }
+
+            .center {
+                text-align: right;
+            }
+
+            aside {
+                margin-top: -80px;
+                margin-right: 30px;
+            }
+
+            section {
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+
+            .page {
+                width: 85%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+        }
+
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        ::-webkit-scrollbar{ width: 13px; }
+        ::-webkit-scrollbar-track { background-color:#eaffe7; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background-color:#BAFFAF; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <header class="c12">
+        <a href="index.html"><h1>ujinnoo.com</h1></a>
+        <ul id="main">
+            <a href="4list.html"><li class="c1 menu4">버킷리스트</li></a>
+            <a href="3photos.html"><li class="c1 menu3">사진첩</li></a>
+            <a href="2cake.html"><li class="c1 menu2">케이크</li></a>
+            <a href="1hobby.html"><li class="c1 menu1">취미</li></a>
+            <a href="5profile.html"><li class="sub1">프<br>로<br>필</li></a>
+            <a href="6visitors.html"><li class="sub2">방<br>명<br>록</li></a>
+        </ul>
+    </header>
+    <div class="center">
+    <aside class="a5">
+        <div class="text">
+            <h1>TODAY</h1>
+            <div class="memo1">
+                <p style="display: inline-block;"><input class="emoji" type="text" placeholder="🍰"></p>
+                <p style="display: inline-block;"><input class="write" type="text" placeholder="닉네임"></p><br>
+                <p><input class="write2" type="text" placeholder="유진누에게 방명록 남기기"></p>
+                <p><button class="send">SEND</button></ps=>
+            </div>
+            <div class="memo">
+                <p>👽 이로카미이모&emsp;<span style="font-size: 10pt; color: #22ff00">NEW</span></p>
+                <p style="margin-top: 10px;">유진아 종강이 코앞이야~ 이로 카미도 내 코 앞에 있었으면 좋겠다 ㅎㅎ 기말고사 화이팅!</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>🏀 차농구&emsp;<span style="font-size: 10pt; color: #22ff00">NEW</span></p>
+                <p style="margin-top: 10px;">유진누 ㅎㅇ? 나 찬홍.</p>
+                <p class="small">2023년 06월 07일 18:30</p>
+            </div>
+            <div class="memo">
+                <p>⚽ 살 타버린 황희찬&emsp;<span style="font-size: 10pt; color: #22ff00">NEW</span></p>
+                <p style="margin-top: 10px;">쎼이이이잉~ 나왔다감</p>
+                <p class="small">2023년 06월 07일 15:22</p>
+            </div>
+            <div class="memo">
+                <p>🍺 유니티 깎는 노인 나병호&emsp;<span style="font-size: 10pt; color: #22ff00">NEW</span></p>
+                <p style="margin-top: 10px;">유니티...하나도 어렵지 않습니다....여러분도 다 하실수 있습니다....</p>
+                <p class="small">2023년 06월 07일 13:46</p>
+            </div>
+            <div class="memo">
+                <p>🐥 삐약삐약 병아리&emsp;<span style="font-size: 10pt; color: #22ff00">NEW</span></p>
+                <p style="margin-top: 10px;">글 잘 보고 갑니다~ 제 글도 보러 오세요</p>
+                <p class="small">2023년 06월 07일 08:13</p>
+            </div>
+        </div>
+    </aside>
+    <section class="a5">
+        <div class="text2">
+            <h1>HISTORY</h1>
+            <div class="memo">
+                <p>👊🏻 쿠킹덤 마스터</p>
+                <p style="margin-top: 10px;">ㅎŀㅇ1루 방가방가ྉ 이유진
+                    유진ㅇト 우㉣ㅣ 노ઐ방 ㈎ᥐㅣ로 했잖ㅇト
+                    도㉢H체 언제ㄱ߅는ㄱㅓ야?? ㄴΓ 목빠져~~</p>
+                    <p class="small">2023년 06월 07일 22:46</p>
+                </div>
+                <div class="memo">
+                    <p>😎 밀크맘 나영</p>
+                    <p style="margin-top: 10px;">ㅎr2룽 ㅋ 재밌게 보다 갑니다~ ^^<br>*‥☆─┒ ────<br>│ ε♡з┃バŀ ㄹБ ㆆĦ ♥<br>┕━…*┛ ────</p>
+                    <p class="small">2023년 06월 07일 22:46</p>
+                </div>
+            <div class="memo">
+                <p>😁 언제나 응원하는 편해</p>
+                <p style="margin-top: 10px;">힘들면 말해 유진아</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>🥕 줜</p>
+                <p style="margin-top: 10px;">카미 이로 곧 내가 납치함</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>🍀 네잎클로버설</p>
+                <p style="margin-top: 10px;">유진소녀의 앞길에 행복만 가득하길~</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>🥵 강철계원</p>
+                <p style="margin-top: 10px;">좀만 더 힘내자 ~</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>👎 천사앙큼소녀도봉</p>
+                <p style="margin-top: 10px;">이유진 바보탱 ㅋ~~ -도봉이가-</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>💄 용호동붉은립스틱</p>
+                <p style="margin-top: 10px;">당신은 사랑받기 위해 태어난 사람 ~ >ω<</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>😻 유진누춉춉</p>
+                <p style="margin-top: 10px;">사랑아 유진해</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>👻 넹</p>
+                <p style="margin-top: 10px;">저으이 구세주…최고의 선배…호!</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>😝 김쭈니S2</p>
+                <p style="margin-top: 10px;">헐~~ 완전 안녕 ㅡ.,ㅡ<3</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>😼 제갈혀나</p>
+                <p style="margin-top: 10px;">점 하나 찍고가여~~.</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="memo">
+                <p>😬 골목대장박뚝승</p>
+                <p style="margin-top: 10px;">안녕 박재승 왔다감 ~~(야 돈 좀 있냐?)</p>
+                <p class="small">2023년 06월 07일 22:46</p>
+            </div>
+            <div class="page">
+            <ul>
+                <li><a style="text-decoration: underline; color: #ff8cfd;" href="6visitors.html">1</a></li>
+                <li><a href="6visitors-2.html">2</a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="c12">
+        <div style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ujinnoo/" target="_blank"><img src="img/insta.png" alt="" width=""></a>
+            <a href="https://github.com/ujinnu" target="_blank"><img src="img/github.png" alt=""></a>
+        </div>
+        <div>
+        Copyright ⓒ 2023 ujinnoo, All Right Reserved <br>
+        고급웹퍼블리싱 직무수행능력평가2 D 22261085 이유진 ｜ dbwlssn@kakao.com
+        </div>
+    </footer>
+</body>
+</html>

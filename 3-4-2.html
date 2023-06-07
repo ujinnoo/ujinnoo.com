@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ujinnoo.com ｜ 사진첩</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "굴림";
+        }
+
+        body {
+            height: 830px;
+            background-image: url(./img/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        header h1 {
+            width: fit-content;
+            margin-top: 10px;
+            margin-left: 7%;
+            display: inline-block;
+            color: white;
+            -webkit-text-stroke: 1px #000000;
+            font-family: 'PyeongChangPeace-Bold';
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header h1:hover {
+            color: #FFD3FE;
+        }
+
+        header ul#main {
+            margin-right: 10%;
+        }
+
+        header ul#main li {
+            font-size: 10pt;
+            list-style-type: none;
+        }
+
+        header ul#main a {
+            color: black;
+        }
+
+
+        .menu1 {
+            position: relative;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 90px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu1:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu2 {
+            position: relative;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu2:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu3 {
+            position: relative;
+            background: #E3E1FF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: -10px 5px 0px 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        .menu4 {
+            position: relative;
+            background: #FFFFD5;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu4:hover {
+            transform: translateY(-10px);
+        }
+
+        .sub1 {
+            position: absolute;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 60px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub1:hover {
+            transform: translateX(-10%);
+        }
+
+        .sub2 {
+            position: absolute;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 155px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub2:hover {
+            transform: translateX(-10%);
+        }
+
+        aside {
+            position: relative;
+            margin-top: -75px;
+            margin-right: 10px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: auto;
+        }
+
+        aside ul {
+            font-size: 2rem;
+            text-align: left;
+            list-style-type: none;
+            margin-left: 40px;
+            line-height: 2;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            position: relative;
+            margin-top: -75px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .text {
+            margin: 42px auto;
+            height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .year {
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin-left: -10px;
+        }
+
+        .page1 {
+            margin-top: 236px;
+        }
+
+        .viewimg {
+            margin-top: 20px;
+        }
+
+        .viewimg img {
+            width: 34%;
+        }
+
+        section ul{
+            list-style-type: none;
+            margin: 10px auto 0 auto;
+        }
+
+        section li {
+            padding: 5%;
+            display: inline;
+        }
+
+        ul img {
+            padding: 20px 0;
+            text-align: center;
+            width: 50px;
+        }
+
+        ul img:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: right;
+            margin: 50px 7% 0 auto;
+            font-size: 12px;
+            text-align: 1;
+        }
+
+        footer img {
+            width: 2%;
+            margin-bottom: 5px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .c1 {width: 8.33%; float: right; padding: 10px;}
+        .c2 {width: 16.66%; float: right; padding: 15px;}
+        .c3 {width: 25%; float: right; padding: 15px;}
+        .c4 {width: 33.33%; float: right; padding: 15px;}
+        .c5 {width: 41.66%; float: right; padding: 15px;}
+        .c6 {width: 50%; float: right; padding: 15px;}
+        .c7 {width: 58.33%; float: right; padding: 15px;}
+        .c8 {width: 66.66%; float: right; padding: 15px;}
+        .c9 {width: 75%; float: right; padding: 15px;}
+        .c10 {width: 83.33%; float: right; padding: 15px;}
+        .c11 {width: 91.66%; float: right; padding: 15px;}
+        .c12 {width: 100%; float: right; padding: 15px;}
+
+        .a5 {width: 41.66%; display: inline-block; padding: 15px;}
+
+        @media only screen and (max-width: 768px) {
+            [class*="c"] {
+                width: 100%;
+            }
+            [class*="a"] {
+                width: 80%;
+            }
+
+            [class*="menu"] {
+                width: 54px;
+                margin: 5px;
+                font-size: 8pt;
+            }
+
+            header ul {
+                margin-right: 30px;
+            }
+
+            .center {
+                text-align: right;
+            }
+
+            .viewimg {
+                text-align: center;
+            }
+
+            section ul {
+                text-align: center;
+            }
+
+            section li {
+                padding: 4%;
+            }
+
+            aside {
+                margin-top: -80px;
+                margin-right: 30px;
+            }
+
+            section {
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+        }
+
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        ::-webkit-scrollbar{ width: 13px; }
+        ::-webkit-scrollbar-track { background-color:#f7f6ff; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background-color:#E3E1FF; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <header class="c12">
+        <a href="index.html"><h1>ujinnoo.com</h1></a>
+        <ul id="main">
+            <a href="4list.html"><li class="c1 menu4">버킷리스트</li></a>
+            <a href="3photos.html"><li class="c1 menu3">사진첩</li></a>
+            <a href="2cake.html"><li class="c1 menu2">케이크</li></a>
+            <a href="1hobby.html"><li class="c1 menu1">취미</li></a>
+            <a href="5profile.html"><li class="sub1">프<br>로<br>필</li></a>
+            <a href="6visitors.html"><li class="sub2">방<br>명<br>록</li></a>
+        </ul>
+    </header>
+    <div class="center">
+    <aside class="a5">
+        <div class="text">
+        <ul>
+            <li class="year"><a href="3photos.html">2023</a></li>
+            <li><a href="3photos.html">- 일본 여행</a></li>
+            <li><a href="3-2.html">- 학교 생활</a></li>
+        </ul>
+
+        <ul>
+            <li class="year"><a href="3-3.html">2022</a></li>
+            <li><a href="3-3.html">- 제주도 여행</a></li>
+            <li><a href="3-4.html" style="text-decoration: underline;">- 딤디디야!</a></li>
+        </ul>
+        </div>
+    </aside>
+    <section class="a5">
+        <div class="text">
+            <div class="viewimg"><img src="img/dmdd (2).jpg" alt=""></div>
+            <div style="margin-top: 10px;">
+            <ul class="view">
+                <li><a href="3-4.html"><img src="img/dmdd (1).jpg" alt=""></a></li>
+                <li><a href="3-4-2.html"><img style="width: 60px;" src="img/dmdd (2).jpg" alt=""></a></li>
+                <li><a href="3-4-3.html"><img src="img/dmdd (3).jpg" alt=""></a></li>
+                <li><a href="3-4-4.html"><img src="img/dmdd (4).jpg" alt=""></a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="c12">
+        <div style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ujinnoo/" target="_blank"><img src="img/insta.png" alt="" width=""></a>
+            <a href="https://github.com/ujinnu" target="_blank"><img src="img/github.png" alt=""></a>
+        </div>
+        <div>
+        Copyright ⓒ 2023 ujinnoo, All Right Reserved <br>
+        고급웹퍼블리싱 직무수행능력평가2 D 22261085 이유진 ｜ dbwlssn@kakao.com
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ujinnoo.com ｜ 프로필</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "굴림";
+        }
+
+        body {
+            height: 830px;
+            background-image: url(./img/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        header h1 {
+            width: fit-content;
+            margin-top: 10px;
+            margin-left: 7%;
+            display: inline-block;
+            color: white;
+            -webkit-text-stroke: 1px #000000;
+            font-family: 'PyeongChangPeace-Bold';
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header h1:hover {
+            color: #FFD3FE;
+        }
+
+        header ul#main {
+            margin-right: 10%;
+        }
+
+        header ul#main li {
+            font-size: 10pt;
+            list-style-type: none;
+        }
+
+        header ul#main a {
+            color: black;
+        }
+
+
+        .menu1 {
+            position: relative;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 90px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu1:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu2 {
+            position: relative;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu2:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu3 {
+            position: relative;
+            background: #E3E1FF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu3:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu4 {
+            position: relative;
+            background: #FFFFD5;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu4:hover {
+            transform: translateY(-10px);
+        }
+
+        .sub1 {
+            position: absolute;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 60px 3%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        .sub2 {
+            position: absolute;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 155px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub2:hover {
+            transform: translateX(-10%);
+        }
+
+        aside {
+            position: relative;
+            margin-top: -75px;
+            margin-right: 10px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: auto;
+        }
+
+        .profile {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        aside table {
+            background: #FFFFD5;
+            border: solid 1px black;
+            border-radius: 30px;
+            font-size: 1.2vw;
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+        }
+
+        aside tr, td {
+            padding: 6px ;
+        }
+
+        section {
+            position: relative;
+            margin-top: -75px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        section table {
+            margin: 57px auto;
+            width: 70%;
+        }
+
+        section tr,
+        section td {
+            padding: 15px;
+            border-collapse: collapse;
+            border: solid 1px black;
+        }
+
+        section td:hover {
+            background-color: #FFD3FE;
+        }
+
+        .dday {
+            background-color: #FFFFD5;
+        }
+
+        .dday:hover {
+            background-color: #ffa2fd;
+            text-decoration: underline;
+        }
+
+        .dday a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .click {
+            background-color: #ffa2fd;
+            text-decoration: underline;
+        }
+
+        .text {
+            margin: 42px auto;
+            height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .profile a {
+            color: black;
+        }
+
+        .profile a:hover {
+            color: #ff9cfd;
+        }
+
+        .memo {
+            width: 80%;
+            margin: 20px auto 0 auto;
+            text-align: left;
+            line-height: 2;
+        }
+
+        footer {
+            text-align: right;
+            margin: 50px 7% 0 auto;
+            font-size: 12px;
+            text-align: 1;
+        }
+
+        footer img {
+            width: 2%;
+            margin-bottom: 5px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .c1 {width: 8.33%; float: right; padding: 10px;}
+        .c2 {width: 16.66%; float: right; padding: 15px;}
+        .c3 {width: 25%; float: right; padding: 15px;}
+        .c4 {width: 33.33%; float: right; padding: 15px;}
+        .c5 {width: 41.66%; float: right; padding: 15px;}
+        .c6 {width: 50%; float: right; padding: 15px;}
+        .c7 {width: 58.33%; float: right; padding: 15px;}
+        .c8 {width: 66.66%; float: right; padding: 15px;}
+        .c9 {width: 75%; float: right; padding: 15px;}
+        .c10 {width: 83.33%; float: right; padding: 15px;}
+        .c11 {width: 91.66%; float: right; padding: 15px;}
+        .c12 {width: 100%; float: right; padding: 15px;}
+
+        .a5 {width: 41.66%; display: inline-block; padding: 15px;}
+
+        @media only screen and (max-width: 768px) {
+            [class*="c"] {
+                width: 100%;
+            }
+            [class*="a"] {
+                width: 80%;
+            }
+
+            [class*="menu"] {
+                width: 54px;
+                margin: 5px;
+                font-size: 8pt;
+            }
+
+            header ul {
+                margin-right: 30px;
+            }
+
+            .center {
+                text-align: right;
+            }
+
+            aside {
+                margin-top: -80px;
+                margin-right: 30px;
+            }
+
+            aside table {
+            font-size: 1.5vw;
+            }
+
+            section {
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+
+            .text h1 {
+                margin-left: 10px;
+            }
+
+            .text {
+                text-align: center;
+            }
+        }
+
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        ::-webkit-scrollbar{ width: 13px; }
+        ::-webkit-scrollbar-track { background-color:#fff2ff; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background-color:#FFD3FE; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <header class="c12">
+        <a href="index.html"><h1>ujinnoo.com</h1></a>
+        <ul id="main">
+            <a href="4list.html"><li class="c1 menu4">버킷리스트</li></a>
+            <a href="3photos.html"><li class="c1 menu3">사진첩</li></a>
+            <a href="2cake.html"><li class="c1 menu2">케이크</li></a>
+            <a href="1hobby.html"><li class="c1 menu1">취미</li></a>
+            <a href="5profile.html"><li class="sub1">프<br>로<br>필</li></a>
+            <a href="6visitors.html"><li class="sub2">방<br>명<br>록</li></a>
+        </ul>
+    </header>
+    <div class="center">
+    <aside class="a5">
+        <div class="text">
+            <div class="profile">
+                <div style="text-align: left; margin-top: 10px; font-size: 10pt;">♪ Official髭男dism - 115万キロのフィルム</div>
+                <div style="text-align: left; margin: 10px 0 30px 0; font-size: 10pt;"><audio src="audio/115.mp3" controls style="height: 30px;"></audio></div>
+            <table>
+                <tr>
+                    <td rowspan="6"><img style="width: 80%;" src="img/profile.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td style="width: 20%;">이름</td>
+                    <td>이유진</td>
+                </tr>
+                <tr>
+                    <td>별명</td>
+                    <td>유진누</td>
+                </tr>
+                <tr>
+                    <td>생일</td>
+                    <td>2001.06.12</td>
+                </tr>
+                <tr>
+                    <td>혈액형</td>
+                    <td>A형</td>
+                </tr>
+                <tr>
+                    <td>MBTI</td>
+                    <td>ENFJ</td>
+                </tr>
+            </table>
+            <div style="text-align: left; margin-top: 30px; font-size: 20pt; text-decoration: underline;">
+                <a href="5-1.html">생각</a><a href="5-2.html" style="margin-left: 20px; color: #ff9cfd;">캘린더</a>
+            </div>
+            </div>
+        </div>
+    </aside>
+    <section class="a5">
+        <div class="text">
+            <div style="text-align: center; font-size: 1.2rem; font-weight: bold;" margin-top: 20px;>6</div>
+        <table>
+            <tr>
+                <td>日</td>
+                <td>月</td>
+                <td>火</td>
+                <td>水</td>
+                <td>木</td>
+                <td>金</td>
+                <td>土</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td class="click"><a href="5-2-1.html">8</a></td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td class="dday"><a href="5-2-2.html">12</a></td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td class="dday"><a href="5-2-3.html">21</a></td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+            </tr>
+        </table>
+        <div style="width: 70%; margin: -20px auto; text-align: left;"> * 고급 웹퍼블리싱 종강 ★</div>
+        </div>
+    </section>
+    </div>
+    <footer class="c12">
+        <div style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ujinnoo/" target="_blank"><img src="img/insta.png" alt="" width=""></a>
+            <a href="https://github.com/ujinnu" target="_blank"><img src="img/github.png" alt=""></a>
+        </div>
+        <div>
+        Copyright ⓒ 2023 ujinnoo, All Right Reserved <br>
+        고급웹퍼블리싱 직무수행능력평가2 D 22261085 이유진 ｜ dbwlssn@kakao.com
+        </div>
+    </footer>
+</body>
+</html>

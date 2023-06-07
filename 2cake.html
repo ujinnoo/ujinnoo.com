@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ujinnoo.com ｜ 케이크</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "굴림";
+        }
+
+        body {
+            height: 830px;
+            background-image: url(./img/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        header h1 {
+            width: fit-content;
+            margin-top: 10px;
+            margin-left: 7%;
+            display: inline-block;
+            color: white;
+            -webkit-text-stroke: 1px #000000;
+            font-family: 'PyeongChangPeace-Bold';
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header h1:hover {
+            color: #FFD3FE;
+        }
+
+        header ul#main {
+            margin-right: 10%;
+        }
+
+        header ul#main li {
+            font-size: 10pt;
+            list-style-type: none;
+        }
+
+        header ul#main a {
+            color: black;
+        }
+
+
+        .menu1 {
+            position: relative;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 90px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu1:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu2 {
+            position: relative;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: -10px 5px 0px 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        .menu3 {
+            position: relative;
+            background: #E3E1FF;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu3:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu4 {
+            position: relative;
+            background: #FFFFD5;
+            border-radius: 10px;
+            border: solid 1px black;
+            height: 100px;
+            margin: 0 5px;
+            text-align: center;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .menu4:hover {
+            transform: translateY(-10px);
+        }
+
+        .sub1 {
+            position: absolute;
+            background: #FFD3FE;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 60px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub1:hover {
+            transform: translateX(-10%);
+        }
+
+        .sub2 {
+            position: absolute;
+            background: #BAFFAF;
+            border-radius: 10px;
+            border: solid 1px black;
+            width: 80px;
+            margin: 155px 4%;
+            padding: 15px 13px;
+            transition: all 0.5s;
+            z-index: 0;
+        }
+
+        .sub2:hover {
+            transform: translateX(-10%);
+        }
+
+        aside {
+            position: relative;
+            margin-top: -75px;
+            margin-right: 10px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: auto;
+        }
+
+        aside table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto 0 auto;
+        }
+
+        aside tr, aside td{
+            border: solid 1px black;
+            padding: 10px;
+        }
+
+        aside td.birth{
+            width: 100px;
+        }
+
+        .mybd {
+            background-color: #e5ffe1;
+        }
+
+        .cake {
+            width: 80%;
+            margin: 20px auto 0 auto;
+            text-align: left;
+            line-height: 2.5;
+            font-size: 1vw;
+
+        }
+
+        .cake:hover {
+            color: #6dff57;
+            text-decoration: underline;
+        }
+
+
+        .god {
+            width: 80%;
+            margin: 10px auto 10px auto;
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        section {
+            position: relative;
+            margin-top: -75px;
+            height: 650px;
+            border: solid 1px #000000;
+            background: #ffffff;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        section img {
+            border: solid 1px black;
+            border-radius: 100%;
+            transition: all ease 0.4s;
+        }
+
+        section img:hover {
+            transform: scale(1.2);
+            border: solid 1px #ff3cf5
+        }
+
+        section table {
+            width: 90%;
+            margin: 10px auto 0 auto;
+        }
+
+        section td {
+            padding: 15px 0;
+        }
+
+        .text {
+            margin: 42px auto;
+            height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        footer {
+            text-align: right;
+            margin: 50px 7% 0 auto;
+            font-size: 12px;
+            text-align: 1;
+        }
+
+        footer img {
+            width: 2%;
+            margin-bottom: 5px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .waviy {
+        position: relative;
+        font-size: 20px;
+        }
+
+        .waviy span {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        animation: waviy 1s infinite;
+        animation-delay: calc(.1s * var(--i));
+
+        }
+
+        @keyframes waviy {
+        0%,40%,100% {transform: translateY(0)}
+        20% {transform: translateY(-10px)}
+        }
+
+
+        .c1 {width: 8.33%; float: right; padding: 10px;}
+        .c2 {width: 16.66%; float: right; padding: 15px;}
+        .c3 {width: 25%; float: right; padding: 15px;}
+        .c4 {width: 33.33%; float: right; padding: 15px;}
+        .c5 {width: 41.66%; float: right; padding: 15px;}
+        .c6 {width: 50%; float: right; padding: 15px;}
+        .c7 {width: 58.33%; float: right; padding: 15px;}
+        .c8 {width: 66.66%; float: right; padding: 15px;}
+        .c9 {width: 75%; float: right; padding: 15px;}
+        .c10 {width: 83.33%; float: right; padding: 15px;}
+        .c11 {width: 91.66%; float: right; padding: 15px;}
+        .c12 {width: 100%; float: right; padding: 15px;}
+
+        .a1 {width: 80%; display: inline-block; padding: 0%;}
+        .a5 {width: 41.66%; display: inline-block; padding: 15px;}
+
+        @media only screen and (max-width: 768px) {
+            [class*="c"] {
+                width: 100%;
+            }
+
+            .a5 {
+                width: 80%;
+            }
+
+            .a1 {
+                width: 100%;
+            }
+
+            [class*="menu"] {
+                width: 54px;
+                margin: 5px;
+                font-size: 8pt;
+            }
+
+            header ul {
+                margin-right: 30px;
+            }
+
+            .center {
+                text-align: right;
+            }
+
+            aside {
+                margin-top: -80px;
+                margin-right: 30px;
+            }
+
+            aside table {
+                text-align: center;
+            }
+
+            .cakevideo {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .cake {
+                width: 80%;
+            }
+
+            .heart {
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            section {
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+
+            section td {
+            padding: 15px 10px;
+        }
+        }
+
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        ::-webkit-scrollbar{ width: 13px; }
+        ::-webkit-scrollbar-track { background-color:#eaffe7; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb { background-color:#BAFFAF; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <header class="c12">
+        <a href="index.html"><h1>ujinnoo.com</h1></a>
+        <ul id="main">
+            <a href="4list.html"><li class="c1 menu4">버킷리스트</li></a>
+            <a href="3photos.html"><li class="c1 menu3">사진첩</li></a>
+            <a href="2cake.html"><li class="c1 menu2">케이크</li></a>
+            <a href="1hobby.html"><li class="c1 menu1">취미</li></a>
+            <a href="5profile.html"><li class="sub1">프<br>로<br>필</li></a>
+            <a href="6visitors.html"><li class="sub2">방<br>명<br>록</li></a>
+        </ul>
+    </header>
+    <div class="center">
+    <aside class="a5">
+        <div class="text">
+            <div class="waviy god">
+                <span style="--i:1">케</span>
+                <span style="--i:2">이</span>
+                <span style="--i:3">크</span>
+                <span style="--i:4">의</span>
+                <span style="--i:5">神</span>
+            </div>
+            <div class="cakevideo">
+            <video width="40%" autoplay loop>
+                <source src="video/cake (1).mp4" type="video/mp4">
+                <source src="video/cake (1).webm" type="video/webm">
+                <source src="video/cake (1).ogg" type="video/ogg">
+            </video>
+            <video width="40%" autoplay loop>
+                <source src="video/cake (2).mp4" type="video/mp4">
+                <source src="video/cake (2).webm" type="video/webm">
+                <source src="video/cake (2).ogg" type="video/ogg">
+            </video>
+            </div>
+            <div class="cake">나는 케이크를 만드는 재주가 있다...!<br>
+                친구들의 생일에 케이크를 만들어 주곤 하는데,<br>
+                미리 무슨 색을 좋아하는지 알아보고,<br>
+                그 친구의 스타일을 생각하면서 케이크를 디자인한다.
+
+            </div>
+            <div style=" width: 80%; text-align: left; margin: 50px auto 0 auto;"> 🎉 생일자 🎉 </div>
+            <table>
+                <tr>
+                    <td class="birth">1月3日</td>
+                    <td style="text-align: left;">하수민 생일</td>
+                </tr>
+                <tr>
+                    <td>1月25日</td>
+                    <td style="text-align: left;">김도연 생일</td>
+                </tr>
+                <tr>
+                    <td>1月27日</td>
+                    <td style="text-align: left;">원지윤 생일</td>
+                </tr>
+                <tr>
+                    <td>2月26日</td>
+                    <td style="text-align: left;">김준휘 생일</td>
+                </tr>
+                <tr>
+                    <td>3月3日</td>
+                    <td style="text-align: left;">이주원 생일</td>
+                </tr>
+                <tr>
+                    <td>3月11日</td>
+                    <td style="text-align: left;">임찬홍 생일</td>
+                </tr>
+                <tr>
+                    <td>3月21日</td>
+                    <td style="text-align: left;">박유미 생일</td>
+                </tr>
+                <tr>
+                    <td>4月28日</td>
+                    <td style="text-align: left;">박유현 생일</td>
+                </tr>
+                <tr>
+                    <td>5月4日</td>
+                    <td style="text-align: left;">언니 생일</td>
+                </tr>
+                <tr class="mybd">
+                    <td >6月12日</td>
+                    <td style="text-align: left;">내 생일</td>
+                </tr>
+                <tr>
+                    <td>6月25日</td>
+                    <td style="text-align: left;">아빠 생일</td>
+                </tr>
+                <tr>
+                    <td>7月11日</td>
+                    <td style="text-align: left;">김소정 생일</td>
+                </tr>
+                <tr>
+                    <td>7月27日</td>
+                    <td style="text-align: left;">박세현, 이현아 생일</td>
+                </tr>
+                <tr>
+                    <td>8月17日</td>
+                    <td style="text-align: left;">박재승, 오나영, 장나영 생일</td>
+                </tr>
+                <tr>
+                    <td>8月24日</td>
+                    <td style="text-align: left;">엄마 생일</td>
+                </tr>
+                <tr>
+                    <td>9月3日</td>
+                    <td style="text-align: left;">서지은 생일</td>
+                </tr>
+                <tr>
+                    <td>9月4日</td>
+                    <td style="text-align: left;">정유진 생일</td>
+                </tr>
+                <tr>
+                    <td>11月5日</td>
+                    <td style="text-align: left;">최서영 생일</td>
+                </tr>
+                <tr>
+                    <td>12月6日</td>
+                    <td style="text-align: left;">양윤아 생일</td>
+                </tr>
+                <tr>
+                    <td>12月10日</td>
+                    <td style="text-align: left;">신윤재 생일</td>
+                </tr>
+            </table>
+        </div>
+    </aside>
+    <section class="a5">
+        <div class="text">
+            <div class="heart"><img src="img/heart.gif" alt="" width="20%" style="border: solid 1px white; margin-top: 20px"></div>
+            <table>
+                <tr>
+                    <td><img class="a1" src="img/cake (2).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (4).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (7).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (13).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (6).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (3).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (10).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (9).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (8).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (18).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (19).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (20).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (14).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (16).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (17).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (22).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (15).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (21).jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td><img class="a1" src="img/cake (25).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (26).jpg" alt=""></td>
+                    <td><img class="a1" src="img/cake (24).jpg" alt=""></td>
+                </tr>
+            </table>
+            <div class="heart"><img src="img/heart.gif" alt="" width="20%" style="border: solid 1px white; margin-top: 20px"></div>
+        </div>
+    </section>
+    </div>
+    <footer class="c12">
+        <div style="margin-top: 10px;">
+            <a href="https://www.instagram.com/ujinnoo/" target="_blank"><img src="img/insta.png" alt="" width=""></a>
+            <a href="https://github.com/ujinnu" target="_blank"><img src="img/github.png" alt=""></a>
+        </div>
+        <div>
+        Copyright ⓒ 2023 ujinnoo, All Right Reserved <br>
+        고급웹퍼블리싱 직무수행능력평가2 D 22261085 이유진 ｜ dbwlssn@kakao.com
+        </div>
+    </footer>
+</body>
+</html>
